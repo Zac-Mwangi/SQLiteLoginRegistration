@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.LineNumberReader;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     EditText et_username,pass,repass;
     TextView login;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
             startActivity(intent);
         }if(v==regBTN){
-
+            register();
         }
     }
     public void register(){
@@ -58,8 +60,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Boolean insert = db.insertData(username,password);
                     if(insert==true){
                         Toast.makeText(this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(),DashboardActivity.class);
+                        startActivity(intent);
+                    }else{
+                        Toast.makeText(this, "User Not Registered", Toast.LENGTH_SHORT).show();
                     }
+                }else{
+                    Toast.makeText(this, "User Already Exist", Toast.LENGTH_SHORT).show();
                 }
+            }else{
+                Toast.makeText(this, "Password and confirm password not matching", Toast.LENGTH_SHORT).show();
             }
         }
     }
