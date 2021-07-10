@@ -18,7 +18,7 @@
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_username"
+            android:id="@+id/l_username"
             android:layout_width="match_parent"
             android:inputType="text"
             android:layout_height="wrap_content" />
@@ -35,31 +35,14 @@
 
         <!--this is the actual edit text which takes the input-->
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pass"
+            android:id="@+id/l_pass"
             android:layout_width="match_parent"
             android:inputType="textPassword"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:hint="Re Password">
-
-        <!--this is the actual edit text which takes the input-->
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/repass"
-            android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="wrap_content" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/regBTN"
+        android:id="@+id/logBTN"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -67,15 +50,16 @@
         android:textColor="#fff"
         android:background="#FFC0CB"
         android:layout_marginEnd="32dp"
-        android:text="Register"/>
+        android:text="Login"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:text="Login"
-        android:id="@+id/login"
+        android:text="Sigup for new account"
+        android:id="@+id/signupT"
         android:gravity="center"
         android:textColor="#ADD8E6"
         android:layout_marginTop="8dp"/>
+
 </LinearLayout>
